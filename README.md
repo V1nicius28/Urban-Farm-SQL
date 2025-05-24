@@ -1,40 +1,41 @@
 # Urban-Farm-SQL
-Urban Farm is a desktop application developed in C# using WPF (.NET 8) designed to help manage and track urban farming operations. The app provides an intuitive interface for monitoring monthly production, plant growth, harvested volume, and resource usage.
+Urban Farm é um aplicativo desktop desenvolvido em C# utilizando WPF (.NET), projetado para ajudar no gerenciamento e acompanhamento de operações de agricultura urbana. O aplicativo oferece uma interface intuitiva para monitorar a produção mensal, o crescimento das plantas, o volume colhido e o uso de recursos.
 
-✨ Features
-📅 Monthly production tracking (select a month and input relevant data)
-🌿 Records for:
+✨ Funcionalidades
+📅 Acompanhamento da produção mensal (selecione um mês e insira os dados relevantes)
+🌿 Registros de:
 
-Quantity produced
+Quantidade produzida
 
-Plant growth
+Crescimento das plantas
 
-Harvested volume
+Volume colhido
 
-Resource usage
-📊 Visual summary of production data
-💾 Data persistence using JSON and SQL Server
-🌗 Light and Dark Mode themes
-🎨 UI design inspired by Figma mockups
-🔒 Simple login system (optional Google login available)
+Uso de recursos
 
-🛠️ Technologies Used
+📊 Resumo visual dos dados de produção
+💾 Persistência de dados utilizando JSON e SQL Server
+🌗 Temas claro e escuro
+🎨 Design da interface inspirado em protótipos do Figma
+🔒 Sistema de login simples (com opção de login via Google)
 
-C# with WPF (.NET 8)
+🛠️ Tecnologias Utilizadas
 
-XAML for UI design
+C# com WPF (.NET)
 
-Local data storage via JSON
+XAML para design da interface
 
-Microsoft SQL Server for structured and centralized data management
+Armazenamento local de dados via JSON
 
-📁 File & Data Storage
-Urban-Farm adopts a hybrid data persistence approach:
+Microsoft SQL Server para gerenciamento centralizado e estruturado de dados
 
-JSON Files: Used for quick access to local user preferences, UI state, and offline-first operations. Ensures lightweight persistence without needing a database connection.
+📁 Armazenamento de Arquivos e Dados
+O Urban Farm adota uma abordagem híbrida de persistência de dados:
 
-SQL Server: Used to store structured data such as user accounts, production records, monthly statistics, and historical logs. This provides a more scalable and secure way to manage data, especially in multi-user or networked environments.
+Arquivos JSON: Utilizados para acesso rápido às preferências locais do usuário, estado da interface e operações com prioridade offline. Garantem uma persistência leve sem necessidade de conexão com banco de dados.
 
-Users can continue using the app without internet access, relying on local JSON files. When connected to the SQL Server, data is synchronized or retrieved as needed, enabling powerful querying, reporting, and future expansion.
+SQL Server: Utilizado para armazenar dados estruturados como contas de usuários, registros de produção, estatísticas mensais e históricos. Proporciona uma forma mais escalável e segura de gerenciar dados, especialmente em ambientes multiusuário ou em rede.
 
-🌤️ This app uses the Open-Meteo API, which is free and requires no authentication key.
+Os usuários podem continuar utilizando o aplicativo sem acesso à internet, com base nos arquivos JSON locais. Quando conectados ao SQL Server, os dados são sincronizados ou recuperados conforme necessário, permitindo consultas poderosas, geração de relatórios e expansão futura.
+
+🌤️ Este aplicativo utiliza a API Open-Meteo, que é gratuita e não requer chave de autenticação.
