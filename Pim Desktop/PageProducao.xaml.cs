@@ -26,12 +26,11 @@ namespace Pim_Desktop
         public PageProducao(Frame mainFrame)
         {
             InitializeComponent();
-            _mainFrame = mainFrame; // Armazena a referência ao Frame
+            _mainFrame = mainFrame; 
         }
 
         private void Voltar_Click(object sender, RoutedEventArgs e)
         {
-            // Navega de volta para a PageInicio
             _mainFrame.Navigate(new PageInicio(_mainFrame));
         }
         private void Gerar_Click(object sender, RoutedEventArgs e)

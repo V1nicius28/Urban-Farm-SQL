@@ -52,65 +52,59 @@ namespace Pim_Desktop
             }
         }
 
-        // Quando o texto no campo de email é alterado, reseta a mensagem de erro
+
         private void EmailTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             if (!string.IsNullOrWhiteSpace(EmailTextBox.Text))
             {
-                EmailError.Visibility = Visibility.Collapsed; // Oculta mensagem de erro
-                SenhaError.Visibility = Visibility.Collapsed; // Oculta mensagem de erro
+                EmailError.Visibility = Visibility.Collapsed; 
+                SenhaError.Visibility = Visibility.Collapsed; 
             }
         }
 
-        // Quando o texto no campo de senha é alterado, reseta a mensagem de erro
+
         private void SenhaPasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
         {
             if (!string.IsNullOrWhiteSpace(SenhaTextBox.Password))
             {
-                SenhaError.Visibility = Visibility.Collapsed; // Oculta mensagem de erro
+                SenhaError.Visibility = Visibility.Collapsed; 
             }
         }
 
         private void Entrar_Click(object sender, RoutedEventArgs e)
         {
-            // Obter as credenciais
             string email = EmailTextBox.Text;
             string senha = SenhaTextBox.Password;
 
-            // Validação simples de credenciais
             if (email == "admin@gmail.com" && senha == "admin")
             {
-                // Abrir a nova janela se as credenciais forem válidas
                 TelaInicio novaJanela = new TelaInicio();
-                novaJanela.Show(); // Abre a nova janela
+                novaJanela.Show(); 
                 Application.Current.MainWindow.Close();
-                this.Close(); // Fecha a janela de login
+                this.Close(); 
             }
             else
             {
-                // Exibir mensagens de erro apropriadas
                 bool emailInvalido = false;
                 bool senhaInvalida = false;
 
-                // Exibir mensagens de erro apropriadas
                 if (string.IsNullOrWhiteSpace(EmailTextBox.Text))
                 {
-                    EmailBorder.BorderBrush = new SolidColorBrush(Color.FromRgb(237, 66, 69)); ; // Borda vermelha
-                    EmailError.Text = "Email inválido";  // Mensagem personalizada
-                    EmailError.Visibility = Visibility.Visible; // Mostrar mensagem de erro
-                    emailInvalido = true; // Marcar email como inválido
+                    EmailBorder.BorderBrush = new SolidColorBrush(Color.FromRgb(237, 66, 69)); ; 
+                    EmailError.Text = "Email inválido";  
+                    EmailError.Visibility = Visibility.Visible; 
+                    emailInvalido = true; 
                 }
 
 
-                // Se ambos os campos estão preenchidos, verificar credenciais
                 if (!emailInvalido && !senhaInvalida)
                 {
                     if (senha != "admin" || email != "admin@gmail.com")
 
-                    SenhaBorder.BorderBrush = new SolidColorBrush(Color.FromRgb(237, 66, 69)); ; // Borda vermelha
-                    EmailBorder.BorderBrush = new SolidColorBrush(Color.FromRgb(237, 66, 69)); ; // Borda vermelha
-                    SenhaError.Text = "Suas credenciais estão incorretas ou expiraram";  // Mensagem personalizada
-                    SenhaError.Visibility = Visibility.Visible; // Mostrar mensagem de erro
+                    SenhaBorder.BorderBrush = new SolidColorBrush(Color.FromRgb(237, 66, 69)); ; 
+                    EmailBorder.BorderBrush = new SolidColorBrush(Color.FromRgb(237, 66, 69)); ; 
+                    SenhaError.Text = "Suas credenciais estão incorretas ou expiraram";  
+                    SenhaError.Visibility = Visibility.Visible; 
                 }
             }
         }

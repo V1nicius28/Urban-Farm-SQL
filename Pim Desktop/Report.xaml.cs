@@ -46,7 +46,7 @@ namespace Pim_Desktop
             }
 
             Comentario = CommentTextBox.Text;
-            this.DialogResult = true; // Sinaliza que a ação foi bem-sucedida
+            this.DialogResult = true; 
             this.Close();
 
 
@@ -54,8 +54,8 @@ namespace Pim_Desktop
 
         private void CancelarButton_Click(object sender, RoutedEventArgs e)
         {
-            Resultado = false; // Define que o usuário cancelou
-            this.Close(); // Fecha a janela
+            Resultado = false; 
+            this.Close(); 
         }
 
         private void CommentBox_GotFocus(object sender, RoutedEventArgs e)
