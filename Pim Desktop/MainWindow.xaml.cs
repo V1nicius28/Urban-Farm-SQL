@@ -202,10 +202,13 @@ namespace Pim_Desktop
             LoginWindow.Show(); 
         }
 
-        private void Facebook_Click(object sender, RoutedEventArgs e)
+        private void Convidado_Click(object sender, RoutedEventArgs e)
         {
-            LoginFacebook LoginWindow = new LoginFacebook();
-            LoginWindow.Show(); 
+            TelaInicio LoginWindow = new TelaInicio();
+            LoginWindow.Show();
+            Application.Current.MainWindow.Close();
+            this.Close();
+
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
@@ -214,11 +217,6 @@ namespace Pim_Desktop
             if (loginGoogle != null)
             {
                 loginGoogle.Close(); 
-            }
-            var loginFacebook = Application.Current.Windows.OfType<LoginFacebook>().FirstOrDefault();
-            if (loginFacebook != null)
-            {
-                loginFacebook.Close(); 
             }
         }
 
@@ -229,13 +227,8 @@ namespace Pim_Desktop
             {
                 google.Close();
             }
-
-            var facebook = Application.Current.Windows.OfType<LoginFacebook>().FirstOrDefault();
-            if (facebook != null)
-            {
-                facebook.Close();
-            }
         }
+
     }
 }
 
