@@ -1,3 +1,6 @@
+![Capturar1](https://github.com/user-attachments/assets/d0ad87e5-06fd-4c4a-a0f9-c34c87d266cf)
+
+
 # Urban-Farm-SQL
 Urban Farm é um aplicativo desktop desenvolvido em C# utilizando WPF (.NET), projetado para ajudar no gerenciamento e acompanhamento de operações de agricultura urbana. O aplicativo oferece uma interface intuitiva para monitorar a produção mensal, o crescimento das plantas, o volume colhido e o uso de recursos.
 
